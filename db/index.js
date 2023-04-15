@@ -1,28 +1,124 @@
 const db = require("../config/db");
 
-const getAllDepartments = (err, req, res) => {};
+const getAllDepartments = (req, res) => {
+  const sql = "";
+  db.promise()
+    .query(sql)
+    .then((results) => {
+      res.json({});
+    })
+    .catch((err) => console.error(err));
+};
 
-const addDepartment = (err, req, res) => {};
+const addDepartment = (req, res) => {
+  const sql = "";
+  db.promise()
+    .query(sql)
+    .then((results) => {
+      res.json({});
+    })
+    .catch((err) => console.error(err));
+};
 
-const updateDepartment = (err, req, res) => {};
+const updateDepartment = (req, res) => {
+  const sql = "";
+  db.promise()
+    .query(sql)
+    .then((results) => {
+      res.json({});
+    })
+    .catch((err) => console.error(err));
+};
 
-const deleteDepartment = (err, req, res) => {};
+const deleteDepartment = (req, res) => {
+  const sql = "";
+  db.promise()
+    .query(sql)
+    .then((results) => {
+      res.json({});
+    })
+    .catch((err) => console.error(err));
+};
 
-const getAllRoles = (err, req, res) => {};
+const getAllRoles = (req, res) => {
+  const sql = "";
+  db.promise()
+    .query(sql)
+    .then((results) => {
+      res.json({});
+    })
+    .catch((err) => console.error(err));
+};
 
-const addRole = (err, req, res) => {};
+const addRole = (req, res) => {
+  const sql = "";
+  db.promise()
+    .query(sql)
+    .then((results) => {
+      res.json({});
+    })
+    .catch((err) => console.error(err));
+};
 
-const updateRole = (err, req, res) => {};
+const updateRole = (req, res) => {
+  const sql = "";
+  db.promise()
+    .query(sql)
+    .then((results) => {
+      res.json({});
+    })
+    .catch((err) => console.error(err));
+};
 
-const deleteRole = (err, req, res) => {};
+const deleteRole = (req, res) => {
+  const sql = "";
+  db.promise()
+    .query(sql)
+    .then((results) => {
+      res.json({});
+    })
+    .catch((err) => console.error(err));
+};
 
-const getAllEmployees = (err, req, res) => {};
+const getAllEmployees = (req, res) => {
+  const sql = "";
+  db.promise()
+    .query(sql)
+    .then((results) => {
+      res.json({});
+    })
+    .catch((err) => console.error(err));
+};
 
-const addEmployee = (err, req, res) => {};
+const addEmployee = (req, res) => {
+  const sql = "";
+  db.promise()
+    .query(sql)
+    .then((results) => {
+      res.json({});
+    })
+    .catch((err) => console.error(err));
+};
 
-const updateEmployee = (err, req, res) => {};
+const updateEmployee = (req, res) => {
+  const sql = "";
+  db.promise()
+    .query(sql)
+    .then((results) => {
+      res.json({});
+    })
+    .catch((err) => console.error(err));
+};
 
-const deleteEmployee = (err, req, res) => {};
+const deleteEmployee = (req, res) => {
+  const sql = "";
+  db.promise()
+    .query(sql)
+    .then((results) => {
+      res.json({});
+    })
+    .catch((err) => console.error(err));
+};
 
 module.exports = {
   getAllDepartments,
