@@ -1,12 +1,12 @@
-const express = require("express");
+const { Router } = require("express");
 const employeeRouter = require("./employee");
 const departmentRouter = require("./department");
 const roleRouter = require("./role");
 
-const app = express();
+const router = Router();
 
-app.use("/employee", employeeRouter);
-app.use("/department", departmentRouter);
-app.use("/role", roleRouter);
+router.use("/employee", employeeRouter);
+router.use("/department", departmentRouter);
+router.use("/role", roleRouter);
 
-module.exports = app;
+module.exports = router;
