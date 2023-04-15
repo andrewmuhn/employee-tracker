@@ -76,12 +76,15 @@ const deleteDepartment = (req, res) => {
 };
 
 const getAllRoles = (req, res) => {
-  const sql = "";
+  const sql = `SELECT role.id, role.title AS "Job Title", department.name AS Department, role.salary AS Salary FROM role JOIN department ON role.department_id = department.id`;
 
   db.promise()
     .query(sql)
     .then((results) => {
-      res.json({});
+      res.json({
+        message: "Get request for all roles",
+      });
+      console.table(results[0]);
     })
     .catch((err) => console.error(err));
 };
