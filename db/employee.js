@@ -31,7 +31,20 @@ module.exports = {
       .catch((err) => console.error(err));
   },
 
-  getEmployeesByDepartment(req, res) {},
+  getEmployeesByDepartment(req, res) {
+    const sql = `SELECT A.id, A.first_name AS "First Name", A.last_name AS "Last Name", role.title AS "Job Title", department.name AS Department, role.salary AS Salary, CONCAT(B.first_name, ' ', B.last_name) AS Manager FROM employee A LEFT JOIN employee B ON A.manager_id = B.id JOIN role ON A.role_id = role.id JOIN department ON role.department_id = department.id WHERE department.id = ?`;
+    const param = req.params.id;
+
+    db.promise()
+      .query(sql, param)
+      .then((results) => {
+        res.json({
+          message: "Get request for employees by department",
+        });
+        console.table(results[0]);
+      })
+      .catch((err) => console.error(err));
+  },
 
   addEmployee(req, res) {
     const sql =
