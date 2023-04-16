@@ -16,7 +16,20 @@ module.exports = {
       .catch((err) => console.error(err));
   },
 
-  getTotalBudget(req, res) {},
+  getTotalBudget(req, res) {
+    const sql = `SELECT department.name AS Department, SUM(role.salary) AS "Total Expenses" FROM department JOIN role ON department.id = role.department_id JOIN employee ON employee.role_id = role.id WHERE department.id = ?`;
+    const param = req.params.id;
+
+    db.promise()
+      .query(sql, param)
+      .then((results) => {
+        res.json({
+          message: "Get expenses for department by id",
+        });
+        console.table(results[0]);
+      })
+      .catch((err) => console.error(err));
+  },
 
   addDepartment(req, res) {
     const sql = "INSERT INTO department (name) VALUES (?)";
