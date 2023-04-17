@@ -35,28 +35,35 @@ const getRoleNames = async () => {
   return roles;
 };
 
-const getDepartmentNames = async () => {};
+const getDepartmentNames = async () => {
+  const data = await getAllDepartments();
+  let departments = [];
+  for (let i = 0; i < data.length; i++) {
+    const department = data[i];
+    departments.push(data[i]["Name"]);
+  }
+  return departments;
+};
 
-const getManagerId = async (manager) => {
-  const name = manager.split(" ");
+const getEmployeeId = async (employee) => {
+  const name = employee.split(" ");
   const data = await getAllEmployees();
-  let managerId;
+  let employeeId;
   for (let i = 0; i < data.length; i++) {
     const firstName = data[i]["First Name"];
     const lastName = data[i]["Last Name"];
     if (firstName === name[0] && lastName === name[1]) {
-      managerId = data[i].id;
+      employeeId = data[i].id;
     }
   }
 
-  return managerId;
+  return employeeId;
 };
 
 const getRoleId = async (role) => {
   const roleData = await getAllRoles();
   let roleId;
   for (let i = 0; i < roleData.length; i++) {
-    console.log(roleData[i]["Job Title"]);
     if (roleData[i]["Job Title"] === role) {
       roleId = roleData[i].id;
     }
@@ -64,11 +71,23 @@ const getRoleId = async (role) => {
   return roleId;
 };
 
+const getDepartmentId = async (department) => {
+  const departmentData = await getAllDepartments();
+  let departmentId;
+  for (let i = 0; i < departmentData.length; i++) {
+    if (departmentData[i]["Name"] === department) {
+      departmentId = departmentData[i].id;
+    }
+  }
+  return departmentId;
+};
+
 module.exports = {
   getManagerNames,
   getEmployeeNames,
   getRoleNames,
   getDepartmentNames,
-  getManagerId,
+  getEmployeeId,
   getRoleId,
+  getDepartmentId,
 };

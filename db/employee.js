@@ -71,7 +71,7 @@ module.exports = {
       .catch((err) => console.error(err));
   },
 
-  deleteEmployee() {
+  deleteEmployee(id) {
     const sql = "DELETE FROM employee WHERE id = ?";
     const param = id;
 

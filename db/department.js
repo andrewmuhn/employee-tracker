@@ -9,8 +9,7 @@ module.exports = {
       .promise()
       .query(sql)
       .then((results) => {
-        console.log("\n");
-        console.table(results[0]);
+        return results[0];
       })
       .catch((err) => console.error(err));
   },
