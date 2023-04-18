@@ -1,5 +1,4 @@
 const db = require("../config/db");
-const cTable = require("console.table");
 
 module.exports = {
   getAllDepartments() {

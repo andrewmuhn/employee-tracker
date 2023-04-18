@@ -1,5 +1,3 @@
-const db = require("../config/db");
-const cTable = require("console.table");
 const { getAllRoles, addRole, deleteRole } = require("./role");
 const {
   getAllDepartments,
