@@ -43,6 +43,8 @@
 	DB_NAME: "employee_db"
 ```
 
+![Setup Gif](Assets/setup.gif)
+
 ## Usage
 
 - Follow the above installation steps to get started.
@@ -58,15 +60,24 @@
   - You can also choose to view employees by their department or manager
   - You can also see the utilzed budget of a department
 
+View all Employees, Roles, and departments
+![View Gif](Assets/view-all.gif)
+
+Add Departments, Roles, and Employees
+![Add Gif](Assets/add.gif)
+
+Delete Employees, Roles, and Departments
+![Delete Gif](Assets/delete.gif)
+
 [Link to repo](https://github.com/andrewmuhn/employee-tracker)
 
-[Link to video walkthrough of application]()
+[Link to video walkthrough of application](https://drive.google.com/file/d/1XsXRtElA88XUOhcmzfxaIrJFIewvLqaw/view)
 
 ## Issues
 
-- Currently if you try and delete a role or department that has an employee or role referencing it the application will error out. While this is good as it prevents deleting data unwittingly I would prefer to have the CLI validate the request and prevent the user from doing this in the CLI rather than throw an error
+- Currently if you try and delete a role or department that has an employee or role referencing it the application will error. While this is good as it prevents deleting data unwittingly I would prefer to have the CLI validate the request and prevent the user from doing this in the CLI rather than throw an error.
 
-- The view total utilized budget will display incorrect information if there is not at least one employee in each role associated with the department.
+![Error Described](Assets\deletion-error.png)
 
 ## Credits
 
