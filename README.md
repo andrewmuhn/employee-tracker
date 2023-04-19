@@ -80,7 +80,7 @@ Delete Employees, Roles, and Departments
 
 - Currently if you try and delete a role or department that has an employee or role referencing it the application will error. While this is good as it prevents deleting data unwittingly I would prefer to have the CLI validate the request and prevent the user from doing this in the CLI rather than throw an error.
 
-![Error Described](Assets\deletion-error.png)
+![Error Described](Assets/deletion-error.png)
 
 ## Credits
 
