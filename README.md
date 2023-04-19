@@ -61,12 +61,15 @@
   - You can also see the utilzed budget of a department
 
 View all Employees, Roles, and departments
+
 ![View Gif](Assets/view-all.gif)
 
 Add Departments, Roles, and Employees
+
 ![Add Gif](Assets/add.gif)
 
 Delete Employees, Roles, and Departments
+
 ![Delete Gif](Assets/delete.gif)
 
 [Link to repo](https://github.com/andrewmuhn/employee-tracker)
