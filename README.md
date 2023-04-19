@@ -22,7 +22,7 @@
 	npm i
 ```
 
-(Note: Node.js and npm need to be installed to perform this action. Installing Node.js will also install npm)
+> **Note**: Node.js and npm need to be installed to perform this action. Installing Node.js will also install npm
 
 - Then in order to source the database and seed it with test data run from your terminal:
 
@@ -32,7 +32,7 @@
 	SOURCE path/to/seeds.sql
 ```
 
-(Note: MySql needs to be installed in order to run these commands. Root is the default username but may be different if you selected otherwise. The first command will prompt you for your mySQL password created on installation)
+> **Note**: MySql needs to be installed in order to run these commands. Root is the default username but may be different if you selected otherwise. The first command will prompt you for your mySQL password created on installation
 
 - Then create a .env file and copy the contents of the .env.example over and add your mySQL username and password to the appropraite fields. See below as an example.
 
