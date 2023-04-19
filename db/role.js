@@ -18,7 +18,8 @@ module.exports = {
       "INSERT INTO role (title, salary, department_id) VALUES(?, ?, ?)";
     const params = [title, salary, department_id];
 
-    db.promise()
+    return db
+      .promise()
       .query(sql, params)
       .then((results) => {
         console.log(`\nAdded ${params[0]} to the database`);
@@ -30,7 +31,8 @@ module.exports = {
     const sql = "DELETE FROM role WHERE id = ?";
     const param = id;
 
-    db.promise()
+    return db
+      .promise()
       .query(sql, param)
       .then((results) => {
         if (!results[0].affectedRows) {

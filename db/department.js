@@ -17,11 +17,11 @@ module.exports = {
     const sql = `SELECT department.name AS Department, SUM(role.salary) AS "Total Expenses" FROM department JOIN role ON department.id = role.department_id JOIN employee ON employee.role_id = role.id WHERE department.id = ?`;
     const param = id;
 
-    db.promise()
+    return db
+      .promise()
       .query(sql, param)
       .then((results) => {
-        console.log("\n");
-        console.table(results[0]);
+        return results[0];
       })
       .catch((err) => console.error(err));
   },
@@ -30,7 +30,8 @@ module.exports = {
     const sql = "INSERT INTO department (name) VALUES (?)";
     const param = name;
 
-    db.promise()
+    return db
+      .promise()
       .query(sql, param)
       .then((results) => {
         console.log(`\nAdded ${param} to the database`);
@@ -42,7 +43,8 @@ module.exports = {
     const sql = "UPDATE department SET name = ? WHERE id = ?";
     const params = [name, id];
 
-    db.promise()
+    return db
+      .promise()
       .query(sql, params)
       .then((results) => {
         if (!results[0].affectedRows) {
@@ -58,7 +60,8 @@ module.exports = {
     const sql = "DELETE FROM department WHERE id = ?";
     const param = id;
 
-    db.promise()
+    return db
+      .promise()
       .query(sql, param)
       .then((results) => {
         if (!results[0].affectedRows) {
