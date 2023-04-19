@@ -64,7 +64,7 @@
 
 ## Issues
 
-- Currently if you try and delete a role or department that has an employee or role referencing it the application with error out. While this is good as it prevents deleting data unwittingly I would prefer to have the CLI validate the request and prevent the user from doing this in the CLI rather than throw an error
+- Currently if you try and delete a role or department that has an employee or role referencing it the application will error out. While this is good as it prevents deleting data unwittingly I would prefer to have the CLI validate the request and prevent the user from doing this in the CLI rather than throw an error
 
 - The view total utilized budget will display incorrect information if there is not at least one employee in each role associated with the department.
 
@@ -86,6 +86,6 @@ Utilized:
 Credits to tutorials and forums used:
 
 - [Idea to use nodemon](https://www.youtube.com/watch?v=SccSCuHhOw0&t=218s)
-- [Help in converted asciiHeader to a promise](https://stackoverflow.com/questions/69158795/how-to-convert-a-callback-function-to-a-promise)
+- [Help with converting asciiHeader to a promise](https://stackoverflow.com/questions/69158795/how-to-convert-a-callback-function-to-a-promise)
 
 - Help from TA to fix circular depency issue and refactor code to bring all library functions back into index.
